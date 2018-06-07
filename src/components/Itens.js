@@ -17,7 +17,7 @@ export default class Itens extends Component {
         </View>
         <View style={ styles.detalhes}>
           <Text style={ styles.txtTitulo}>{this.props.item.titulo}</Text>
-          <Text style={ styles.txtValor}>R$ {this.props.item.valor}</Text>
+          <Text style={ (this.props.item.valor > 200) ? styles.txtExpValor : styles.txtValor}>R$ {this.props.item.valor}</Text>
           <Text>Local: {this.props.item.local_anuncio}</Text>
           <Text>Publicado em: {this.props.item.data_publicacao}</Text>
         </View>
